@@ -6,7 +6,7 @@ const create = async ({ email, password, username }) => {
         INSERT INTO users (email, password, username)
         VALUES ($1, $2, $3)
         `,
-    values: [],
+    values: [email, password, username],
   };
 };
 
